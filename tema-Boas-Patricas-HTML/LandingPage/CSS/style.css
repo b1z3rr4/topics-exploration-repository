@@ -1,0 +1,194 @@
+body {
+    background-color: var(--background);
+    color: white;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}   
+.c-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../IMG/header-bg.avif);
+    background-color: rgba(0, 0, 0, 0.5); /* cor preta com 50% de opacidade */
+    background-blend-mode: multiply; /* mistura as duas cores */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 350px;
+    width: 100%;
+}
+.c-logo picture {
+    display: block;
+    background-image: url(../IMG/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+}
+.c-logo h1 {
+    color: var(--title);
+    font-size: 64px;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+header nav ul {
+    color: white;
+    display: flex;
+    gap: 50px;
+    font-size: 20px;
+}
+header nav ul a {
+    padding: 8px 30px;
+}
+header nav ul li {
+    z-index: 3;
+}
+
+.btn-nav {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 40px;
+}
+.btn-nav:hover::before{
+    content: '';
+    width: 30px;
+    height: 160px;
+    background-color: white;
+    position: absolute;
+    animation: rotate 4s linear infinite;
+}
+.btn-nav::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background-color: var(--background);
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* header */
+
+
+/* Sections */
+section {
+    margin: 100px 0;
+    padding: 0 120px;
+}
+#c-aboutUs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#c-aboutUs--text {
+    max-width: 650px;
+}
+#c-aboutUs--text h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+#c-aboutUs--text p {
+    font-size: 18px;
+    font-weight: 600;
+}
+section span {
+    color: var(--details);
+}
+#c-aboutUs--img img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#front-sombra {
+    background-color: var(--front);
+    max-width: 330px;
+    height: 20px;
+}
+#back-sombra {
+    background-color: var(--back);
+    max-width: 320px;
+    height: 20px;
+}
+#designer-sombra {
+    background-color: var(--designer);
+    max-width: 180px;
+    height: 20px;
+}
+.cursos h3 {
+    position: relative;
+    font-weight: 500;
+    left: 12px;
+    top: -15px;
+    font-size: 24px;
+}
+
+.cursos p {
+    margin: 12px 0 40px 0;
+}
+.cursos summary {
+    list-style: none;
+}
+.cursos ul {
+    margin: 8px 0;
+}
+.cursos ul li {
+    margin-left: 40px;
+    list-style: disc;
+    line-height: 2;
+}
+/* Sections */
+
+/* footer */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+.c-footer--links {
+    /* width: 250px; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100px;
+}
+.c-footer--icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.c-footer--icons {
+    font-size: 24px;
+}
+.c-footer--icons button{
+    cursor: pointer;
+    font-size: 25px;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    color: white;
+    background-color: var(--background);
+    /* background-color: rgb(30, 30, 30); */
+    box-shadow: rgba(123, 122, 122, 0.3) -1px -1px 3px, rgba(0, 0, 0, 0.8) 1px 1px 3px;
+}
+footer div {
+    padding: 10px;
+}
+/* footer */
